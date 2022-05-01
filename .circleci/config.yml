@@ -106,19 +106,19 @@ workflows:
   build_test_package_deploy:
     jobs:
       - build      
-      #- test:
-          #requires:
-            #- build
+      - test:
+          requires:
+            - build
       - linting:
           requires:
             - build                           
       - package:
           requires:
-            #- test
+            - test
             - linting
-          #filters:
-            #branches:
-              #only: main
+          filters:
+            branches:
+              only: main
       - deploy:
           requires:
             - package
