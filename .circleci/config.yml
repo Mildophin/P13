@@ -116,9 +116,9 @@ workflows:
           requires:
             #- test
             - linting
-          filters:
-            branches:
-              only: main    
+          #filters:
+            #branches:
+              #only: main
       - deploy:
           requires:
             - package
