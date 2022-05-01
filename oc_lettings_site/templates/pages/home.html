@@ -1,11 +1,4 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block bg_image %}
-    <div class="bg_image">
-        <img src="{% static "images/villa.jpeg" %}" alt="villa">
-    </div>
-{% endblock %}
-
-{% block welcome_message %}
-{% endblock %}
+<title>Holiday Homes</title>
+<h1>Welcome to Holiday Homes</h1>
+<div><a href="{% url 'profiles:index' %}">Profiles</a></div>
+<div><a href="{% url 'lettings:index' %}">Lettings</a></div>
