@@ -118,7 +118,7 @@ workflows:
             - linting
           filters:
             branches:
-              only: main
+              only: master
       - deploy:
           requires:
             - package
