@@ -3,7 +3,7 @@ import os
 import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
 
-from .base import *
+from .base import * # noqa
 
 # GENERAL
 # ------------------------------------------------------------------------------
