@@ -3,9 +3,9 @@ from django.urls import include, path
 from django.views.generic import TemplateView
 
 
-def trigger_error(request):
-    division_by_zero = 1 / 0
-    return division_by_zero
+def trigger_error_server(request):
+    error_server = 1 / 0
+    return error_server
 
 
 urlpatterns = [
@@ -13,5 +13,5 @@ urlpatterns = [
     path("lettings/", include("oc_lettings_site.lettings.urls", namespace="lettings")),
     path("profiles/", include("oc_lettings_site.profiles.urls", namespace="profiles")),
     path("admin/", admin.site.urls),
-    path('sentry-debug/', trigger_error),
+    path('sentry-debug/', trigger_error_server),
 ]

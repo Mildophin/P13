@@ -1,77 +1,25 @@
-## Résumé
+# Projet 13 du parcours python d'OC : ORANGE COUNTY LETTINGS
 
-Site web d'Orange County Lettings
+## Description
 
-## Développement local
+Orange County Lettings (OC Lettings) est une start-up spécialisée dans la location de biens immobiliers. La start-up est en pleine phase d'expansion aux États-Unis.
 
-### Prérequis
+Ce projet consiste à refactorer le code de l'application du site web d'OC Lettings et à le déployer sur Heroku en utilisant un conteneur et un pipeline CI/CD. Le site web reflétant le résultat du refactoring et du déploiement est disponible à l'adresse suivante :
 
-- Compte GitHub avec accès en lecture à ce repository
-- Git CLI
-- SQLite3 CLI
-- Interpréteur Python, version 3.6 ou supérieure
+https://oclettings-heroku.herokuapp.com/
 
-Dans le reste de la documentation sur le développement local, il est supposé que la commande `python` de votre OS shell exécute l'interpréteur Python ci-dessus (à moins qu'un environnement virtuel ne soit activé).
+## Contexte technique
 
-### macOS / Linux
+Le projet utilise les technologies suivantes :
 
-#### Cloner le repository
+* [Python](https://www.python.org) comme langage de programmation
+* [Django](https://www.djangoproject.com/) en tant que framework web
+* [Pytest](https://pytest.org) and [Coverage](https://pypi.org/project/coverage/) pour les tests
+* [Docker](https://www.docker.com) pour la conteneurisation
+* [CircleCI](https://www.circleci.com) pour l'intégration continue
+* [Heroku](https://www.heroku.com) pour le déploiement
+* [Sentry](https://www.sentry.io) pour le monitoring
 
-- `cd /path/to/put/project/in`
-- `git clone https://github.com/OpenClassrooms-Student-Center/Python-OC-Lettings-FR.git`
+## Déploiement local
 
-#### Créer l'environnement virtuel
-
-- `cd /path/to/Python-OC-Lettings-FR`
-- `python -m venv venv`
-- `apt-get install python3-venv` (Si l'étape précédente comporte des erreurs avec un paquet non trouvé sur Ubuntu)
-- Activer l'environnement `source venv/bin/activate`
-- Confirmer que la commande `python` exécute l'interpréteur Python dans l'environnement virtuel
-`which python`
-- Confirmer que la version de l'interpréteur Python est la version 3.6 ou supérieure `python --version`
-- Confirmer que la commande `pip` exécute l'exécutable pip dans l'environnement virtuel, `which pip`
-- Pour désactiver l'environnement, `deactivate`
-
-#### Exécuter le site
-
-- `cd /path/to/Python-OC-Lettings-FR`
-- `source venv/bin/activate`
-- `pip install --requirement requirements.txt`
-- `python manage.py runserver`
-- Aller sur `http://localhost:8000` dans un navigateur.
-- Confirmer que le site fonctionne et qu'il est possible de naviguer (vous devriez voir plusieurs profils et locations).
-
-#### Linting
-
-- `cd /path/to/Python-OC-Lettings-FR`
-- `source venv/bin/activate`
-- `flake8`
-
-#### Tests unitaires
-
-- `cd /path/to/Python-OC-Lettings-FR`
-- `source venv/bin/activate`
-- `pytest`
-
-#### Base de données
-
-- `cd /path/to/Python-OC-Lettings-FR`
-- Ouvrir une session shell `sqlite3`
-- Se connecter à la base de données `.open oc-lettings-site.sqlite3`
-- Afficher les tables dans la base de données `.tables`
-- Afficher les colonnes dans le tableau des profils, `pragma table_info(Python-OC-Lettings-FR_profile);`
-- Lancer une requête sur la table des profils, `select user_id, favorite_city from
-  Python-OC-Lettings-FR_profile where favorite_city like 'B%';`
-- `.quit` pour quitter
-
-#### Panel d'administration
-
-- Aller sur `http://localhost:8000/admin`
-- Connectez-vous avec l'utilisateur `admin`, mot de passe `Abc1234!`
-
-### Windows
-
-Utilisation de PowerShell, comme ci-dessus sauf :
-
-- Pour activer l'environnement virtuel, `.\venv\Scripts\Activate.ps1` 
-- Remplacer `which <my-command>` par `(Get-Command <my-command>).Path`
+**Python 3** est nécessaire pour faire fonctionner le site web.
