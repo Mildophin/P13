@@ -1,9 +1,22 @@
-<title>{{ profile.user.username }}</title>
-<h1>{{ profile.user.username }}</h1>
-<p>First name: {{ profile.user.first_name }}</p>
-<p>Last name: {{ profile.user.last_name }}</p>
-<p>Email: {{ profile.user.email }}</p>
-<p>Favorite city: {{ profile.favorite_city }}</p>
-<div><a href="{% url 'profiles:index' %}">Back</a></div>
-<div><a href="{% url 'home' %}">Home</a></div>
-<div><a href="{% url 'lettings:index' %}">Lettings</a></div>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+<section class="main_section">
+    <div class="big_card">
+        <h1>{{ profile.user.username }}</h1>
+        <div class="card_picture">
+            <img src="{% static 'images/generic_profile.png' %}">
+        </div>
+        <h2>Contact</h2>
+        <p>First name: {{ profile.user.first_name }}</p>
+        <p>Last name: {{ profile.user.last_name }}</p>
+        <p>Email: {{ profile.user.email }}</p>
+        <h2>Preferences</h2>
+        <p>Favorite city: {{ profile.favorite_city }}</p>
+    </div>
+</section>
+{% endblock %}
