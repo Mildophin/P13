@@ -8,7 +8,9 @@ Ce projet consiste à refactorer le code de l'application du site web d'OC Letti
 
 https://oclettings-heroku1.herokuapp.com/
 
-Ce projet a été réalisé dans le cadre du parcours python d'OC. 
+Ce projet a été réalisé dans le cadre du parcours python d'OC.
+
+Un push a été ajouté pour la présentation.
 
 ## Contexte technique
 
